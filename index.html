@@ -239,6 +239,150 @@
         align-items: center;
         justify-content: space-between;
       }
+
+      .about {
+        padding: 8rem 2rem;
+        background: linear-gradient(180deg, #000, var(--primary));
+        position: relative;
+      }
+
+      .about-content {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .about-header {
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .about h2 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 3rem;
+        color: white;
+        margin-bottom: 2rem;
+      }
+
+      .values {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .values span {
+        padding: 0.5rem 1.5rem;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 50px;
+        color: var(--accent);
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+      }
+
+      .values span:hover {
+        transform: translateY(-2px);
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .about-text {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .about-text p {
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+      }
+
+      @media (max-width: 768px) {
+        .about {
+          padding: 4rem 1rem;
+        }
+
+        .about h2 {
+          font-size: 2.5rem;
+        }
+
+        .values {
+          gap: 1rem;
+        }
+
+        .values span {
+          font-size: 1rem;
+          padding: 0.4rem 1.2rem;
+        }
+      }
+
+      .services-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .services-header h2 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 3rem;
+        color: white;
+        margin-bottom: 1rem;
+      }
+
+      .services-header p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.2rem;
+      }
+
+      .clients {
+        padding: 6rem 2rem;
+        background: linear-gradient(0deg, var(--primary), var(--bg));
+      }
+
+      .clients-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .clients h2 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 3rem;
+      }
+
+      .client-logos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+      }
+
+      .client-logos img {
+        height: 50px;
+        width: auto;
+        object-fit: contain;
+      }
+
+      @media (max-width: 768px) {
+        .services-header h2 {
+          font-size: 2.5rem;
+        }
+
+        .clients {
+          padding: 4rem 1rem;
+        }
+
+        .client-logos {
+          gap: 2rem;
+        }
+
+        .client-logos img {
+          height: 40px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -250,7 +394,37 @@
       </div>
     </header>
 
+    <section class="about" data-aos="fade-up">
+      <div class="about-content">
+        <div class="about-header">
+          <h2>Our Story</h2>
+          <div class="values">
+            <span>Innovation</span>
+            <span>Technology</span>
+            <span>Creativity</span>
+            <span>Discover</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <p>
+            Adee Labs is the brainchild of Dev Shekhawat who's the force driving
+            our unwavering commitment to cutting-edge tech solutions.
+          </p>
+          <p>
+            Our aim isn't just to create amazing tools, but to be enablers of
+            innovation and creativity. We're firm believers of a world where
+            technology is not a privilege but a right. Our products are guiding
+            lights on this journey that we hope to embark on with our users.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <main class="services">
+      <div class="services-header" data-aos="fade-up">
+        <h2>Our Products</h2>
+        <p>Explore our suite of innovative solutions</p>
+      </div>
       <div class="services-grid">
         <a
           href="http://supersplit.app/"
@@ -281,7 +455,7 @@
             <i class="fas fa-bezier-curve"></i> Image2Vector
             <span class="platform-icons">
               <i class="fab fa-figma"></i>
-              <i class="fas fa-globe" style="opacity: 0.5;"></i>
+              <i class="fas fa-globe" style="opacity: 0.5"></i>
             </span>
           </h3>
           <p>
@@ -368,6 +542,60 @@
         </a>
       </div>
     </main>
+
+    <!-- Add new clients section before footer -->
+    <section class="clients">
+      <div class="clients-content">
+        <h2>Trusted By</h2>
+        <div class="client-logos">
+          <img
+            src="https://img.logo.dev/netflix.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="Netflix"
+            title="Netflix"
+          />
+          <img
+            src="https://img.logo.dev/plaid.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="Plaid"
+            title="Plaid"
+          />
+          <img
+            src="https://img.logo.dev/nokia.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="Nokia"
+            title="Nokia"
+          />
+          <img
+            src="https://img.logo.dev/supremenewyork.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="Supreme"
+            title="Supreme"
+          />
+          <img
+            src="https://img.logo.dev/loop.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="Loop Returns"
+            title="Loop Returns"
+          />
+          <img
+            src="https://img.logo.dev/deloitte.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="Deloitte"
+            title="Deloitte"
+          />
+          <img
+            src="https://img.logo.dev/nyu.edu?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="NYU"
+            title="NYU"
+          />
+          <img
+            src="https://img.logo.dev/g5.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="G5"
+            title="G5"
+          />
+          <img
+            src="https://img.logo.dev/anodot.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="Anodot"
+            title="Anodot"
+          />
+        </div>
+      </div>
+    </section>
 
     <footer class="footer">
       <div>
