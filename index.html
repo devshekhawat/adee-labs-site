@@ -4,18 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adee Labs - Innovation & Technology</title>
-    <meta name="description" content="Adee Labs - Empowering Innovation Through Cutting-Edge Technology Solutions. We create innovative tools and applications for the modern digital world." />
+    <meta
+      name="description"
+      content="Adee Labs creates innovative digital tools and applications including Supersplit, Image2Vector, TextGPT, and MapMaker. Founded by Dev Shekhawat to empower creators worldwide."
+    />
+
+    <!-- Additional SEO meta tags -->
+    <meta
+      name="keywords"
+      content="Adee Labs, Dev Tools, Image2Vector, Supersplit, TextGPT, MapMaker, Technology Solutions"
+    />
+    <meta
+      property="og:title"
+      content="Adee Labs - Innovation & Technology Solutions"
+    />
+    <meta
+      property="og:description"
+      content="Adee Labs creates innovative digital tools and applications including Supersplit, Image2Vector, TextGPT, and MapMaker. Founded by Dev Shekhawat to empower creators worldwide."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://adeelabs.com" />
+    <meta property="og:image" content="https://adeelabs.com/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Preload critical assets -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      as="style"
+    />
     <link rel="icon" type="image/png" href="favicon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Adee Labs">
-    <meta property="og:image" content="path-to-your-og-image.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Adee Labs" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
 
@@ -126,8 +158,8 @@
         border-radius: 20px;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
-                    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+          background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         border: 1px solid var(--card-border);
         position: relative;
         text-decoration: none;
@@ -528,14 +560,14 @@
         .hamburger {
           display: block;
         }
-        
+
         .mobile-menu.active {
           display: flex;
           flex-direction: column;
           align-items: center;
           justify-content: center;
         }
-        
+
         .mobile-menu a {
           color: white;
           font-size: 1.5rem;
@@ -556,7 +588,12 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
         animation: loading 1.5s infinite;
       }
 
@@ -581,12 +618,20 @@
         color: var(--accent);
         font-size: 0.9rem;
       }
+
+      #constellation {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     </style>
     <script>
-      document.addEventListener("DOMContentLoaded", function() {
+      document.addEventListener("DOMContentLoaded", function () {
         const images = document.querySelectorAll("img[data-src]");
         const imageObserver = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
+          entries.forEach((entry) => {
             if (entry.isIntersecting) {
               const img = entry.target;
               img.src = img.dataset.src;
@@ -595,8 +640,8 @@
             }
           });
         });
-        
-        images.forEach(img => imageObserver.observe(img));
+
+        images.forEach((img) => imageObserver.observe(img));
       });
     </script>
   </head>
@@ -794,49 +839,67 @@
         <h2>Trusted By</h2>
         <div class="client-logos">
           <img
-            src="https://img.logo.dev/netflix.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
-            alt="Netflix"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            data-src="https://img.logo.dev/netflix.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="Netflix - Partner of Adee Labs"
             title="Netflix"
+            loading="lazy"
           />
           <img
-            src="https://img.logo.dev/plaid.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
-            alt="Plaid"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            data-src="https://img.logo.dev/plaid.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="Plaid - Partner of Adee Labs"
             title="Plaid"
+            loading="lazy"
           />
           <img
-            src="https://img.logo.dev/nokia.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
-            alt="Nokia"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            data-src="https://img.logo.dev/nokia.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="Nokia - Partner of Adee Labs"
             title="Nokia"
+            loading="lazy"
           />
           <img
-            src="https://img.logo.dev/supremenewyork.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
-            alt="Supreme"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            data-src="https://img.logo.dev/supremenewyork.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="Supreme - Partner of Adee Labs"
             title="Supreme"
+            loading="lazy"
           />
           <img
-            src="https://img.logo.dev/loop.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
-            alt="Loop Returns"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            data-src="https://img.logo.dev/loop.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="Loop Returns - Partner of Adee Labs"
             title="Loop Returns"
+            loading="lazy"
           />
           <img
-            src="https://img.logo.dev/deloitte.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
-            alt="Deloitte"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            data-src="https://img.logo.dev/deloitte.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="Deloitte - Partner of Adee Labs"
             title="Deloitte"
+            loading="lazy"
           />
           <img
-            src="https://img.logo.dev/nyu.edu?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
-            alt="NYU"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            data-src="https://img.logo.dev/nyu.edu?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="NYU - Partner of Adee Labs"
             title="NYU"
+            loading="lazy"
           />
           <img
-            src="https://img.logo.dev/g5.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
-            alt="G5"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            data-src="https://img.logo.dev/g5.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="G5 - Partner of Adee Labs"
             title="G5"
+            loading="lazy"
           />
           <img
-            src="https://img.logo.dev/anodot.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
-            alt="Anodot"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            data-src="https://img.logo.dev/anodot.com?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=200&format=png&greyscale=false"
+            alt="Anodot - Partner of Adee Labs"
             title="Anodot"
+            loading="lazy"
           />
         </div>
       </div>
@@ -866,9 +929,11 @@
         <a href="refund-policy.html">Refund Policy</a>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 Adee Labs. All rights reserved.</p>
+        <p>&copy; 2025 Adee Labs. All rights reserved.</p>
       </div>
     </footer>
+
+    <canvas id="constellation"></canvas>
   </body>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
@@ -902,20 +967,118 @@
       },
     });
 
-    const navbar = document.querySelector('.navbar');
-    const hero = document.querySelector('.hero');
-    
+    const navbar = document.querySelector(".navbar");
+    const hero = document.querySelector(".hero");
+
     const observerOptions = {
-      rootMargin: '-100px 0px 0px 0px'  // Triggers slightly before the hero section ends
+      rootMargin: "-100px 0px 0px 0px", // Triggers slightly before the hero section ends
     };
-    
+
     const heroObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         // Show navbar when hero is not intersecting (scrolled past)
-        navbar.classList.toggle('visible', !entry.isIntersecting);
+        navbar.classList.toggle("visible", !entry.isIntersecting);
       });
     }, observerOptions);
-    
+
     heroObserver.observe(hero);
+
+    const canvas = document.getElementById("constellation");
+    const ctx = canvas.getContext("2d");
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particles = [];
+    const properties = {
+      particleCount: 50,
+      particleRadius: 3,
+      maxDistance: 100,
+      lineWidth: 1,
+    };
+
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = Math.random() * 2 - 1;
+        this.vy = Math.random() * 2 - 1;
+      }
+
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+      }
+    }
+
+    function init() {
+      for (let i = 0; i < properties.particleCount; i++) {
+        particles.push(new Particle());
+      }
+      animate();
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      particles.forEach((particle) => {
+        particle.update();
+        ctx.beginPath();
+        ctx.arc(
+          particle.x,
+          particle.y,
+          properties.particleRadius,
+          0,
+          Math.PI * 2
+        );
+        ctx.fillStyle = "rgba(255,255,255,0.5)";
+        ctx.fill();
+      });
+
+      particles.forEach((p1, i) => {
+        particles.slice(i + 1).forEach((p2) => {
+          const dx = p1.x - p2.x;
+          const dy = p1.y - p2.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < properties.maxDistance) {
+            ctx.beginPath();
+            ctx.moveTo(p1.x, p1.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.strokeStyle = `rgba(255,255,255,${
+              1 - distance / properties.maxDistance
+            })`;
+            ctx.lineWidth = properties.lineWidth;
+            ctx.stroke();
+          }
+        });
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    init();
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Adee Labs",
+      "url": "https://adeelabs.com",
+      "logo": "https://adeelabs.com/logo.png",
+      "founder": {
+        "@type": "Person",
+        "name": "Dev Shekhawat"
+      },
+      "description": "Adee Labs creates innovative digital tools and applications for the modern digital world.",
+      "sameAs": [
+        "https://twitter.com/AdeeLabsHQ",
+        "https://linkedin.com/company/AdeeLabsHQ",
+        "https://github.com/AdeeLabsHQ"
+      ]
+    }
   </script>
 </html>
