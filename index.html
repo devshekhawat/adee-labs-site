@@ -4,11 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adee Labs - Innovation & Technology</title>
+    <meta name="description" content="Adee Labs - Empowering Innovation Through Cutting-Edge Technology Solutions. We create innovative tools and applications for the modern digital world." />
+    <link rel="icon" type="image/png" href="favicon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Adee Labs">
+    <meta property="og:image" content="path-to-your-og-image.jpg">
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
 
@@ -118,7 +125,9 @@
         padding: 2rem;
         border-radius: 20px;
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease, transform 0.3s ease;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                    background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         border: 1px solid var(--card-border);
         position: relative;
         text-decoration: none;
@@ -383,9 +392,227 @@
           height: 40px;
         }
       }
+
+      .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 1rem 2rem;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+      }
+
+      .navbar.visible {
+        transform: translateY(0);
+      }
+
+      .nav-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        color: white;
+        text-decoration: none;
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        color: var(--text);
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent);
+      }
+
+      .contact {
+        padding: 8rem 2rem;
+        background: linear-gradient(180deg, var(--primary), var(--bg));
+        text-align: center;
+      }
+
+      .contact h2 {
+        font-family: "Space Grotesk", sans-serif;
+        font-size: 3rem;
+        color: white;
+        margin-bottom: 1rem;
+      }
+
+      .contact-methods {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+      }
+
+      .contact-button {
+        padding: 1rem 2rem;
+        background: var(--secondary);
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .contact-button:hover {
+        transform: translateY(-2px);
+        background: var(--accent);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .social-links a {
+        color: var(--text);
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+      }
+
+      .social-links a:hover {
+        color: var(--accent);
+        transform: translateY(-2px);
+      }
+
+      .footer-bottom {
+        margin-top: 2rem;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+        }
+      }
+
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        padding: 10px;
+      }
+
+      .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        z-index: 999;
+      }
+
+      @media (max-width: 768px) {
+        .hamburger {
+          display: block;
+        }
+        
+        .mobile-menu.active {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .mobile-menu a {
+          color: white;
+          font-size: 1.5rem;
+          margin: 1rem 0;
+          text-decoration: none;
+        }
+      }
+
+      .loading {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .loading::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+        animation: loading 1.5s infinite;
+      }
+
+      .card-stats {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid var(--card-border);
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .card-stats span {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .card-stats i {
+        color: var(--accent);
+        font-size: 0.9rem;
+      }
     </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const images = document.querySelectorAll("img[data-src]");
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const img = entry.target;
+              img.src = img.dataset.src;
+              img.removeAttribute("data-src");
+              observer.unobserve(img);
+            }
+          });
+        });
+        
+        images.forEach(img => imageObserver.observe(img));
+      });
+    </script>
   </head>
   <body>
+    <nav class="navbar">
+      <div class="nav-content">
+        <a href="#" class="logo">Adee Labs</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#products">Products</a>
+          <a href="#clients">Clients</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
     <header class="hero">
       <div id="particles" class="particles"></div>
       <div class="hero-content">
@@ -444,6 +671,10 @@
             Effortlessly manage and split expenses with friends during your
             group travels.
           </p>
+          <div class="card-stats">
+            <span><i class="fas fa-users"></i> 100+ Users</span>
+            <span><i class="fas fa-star"></i> 4.8/5</span>
+          </div>
         </a>
         <a
           href="https://image2vector.tech/"
@@ -462,6 +693,10 @@
             Transform your images into scalable vector graphics with our
             AI-powered conversion technology.
           </p>
+          <div class="card-stats">
+            <span><i class="fas fa-users"></i> 42K+ Designers</span>
+            <span><i class="fas fa-image"></i> 250K+ Conversions</span>
+          </div>
         </a>
         <a
           href="https://trytextgpt.vercel.app/"
@@ -476,6 +711,10 @@
             </span>
           </h3>
           <p>Your Virtual Co-Pilot for Smarter Text Input in the Browser</p>
+          <div class="card-stats">
+            <span><i class="fas fa-users"></i> 400+ Active Users</span>
+            <span><i class="fas fa-trophy"></i> #9 Product Hunt</span>
+          </div>
         </a>
         <a
           href="https://www.figma.com/community/plugin/1349097926934489886"
@@ -493,6 +732,9 @@
             Create stunning, detailed maps with our professional cartography
             toolkit.
           </p>
+          <div class="card-stats">
+            <span><i class="fas fa-users"></i> 11K+ Users</span>
+          </div>
         </a>
         <a
           href="https://play.google.com/store/apps/details?id=com.adeelabs.wordest"
@@ -510,6 +752,9 @@
             Challenge your vocabulary and have fun with our addictive
             word-guessing game.
           </p>
+          <div class="card-stats">
+            <span><i class="fas fa-download"></i> 2K+ Downloads</span>
+          </div>
         </a>
         <div class="service-card" data-aos="fade-up" data-aos-delay="600">
           <h3>
@@ -597,11 +842,31 @@
       </div>
     </section>
 
+    <section id="contact" class="contact" data-aos="fade-up">
+      <div class="contact-content">
+        <h2>Get in Touch</h2>
+        <p>Have a question or want to collaborate? Reach out to us!</p>
+        <div class="contact-methods">
+          <a href="mailto:hello@adeelabs.com" class="contact-button">
+            <i class="fas fa-envelope"></i> Email Us
+          </a>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="footer">
       <div>
         <a href="privacy-policy.html">Privacy Policy</a>
         <a href="terms-of-service.html">Terms of Service</a>
         <a href="refund-policy.html">Refund Policy</a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Adee Labs. All rights reserved.</p>
       </div>
     </footer>
   </body>
@@ -636,5 +901,21 @@
         },
       },
     });
+
+    const navbar = document.querySelector('.navbar');
+    const hero = document.querySelector('.hero');
+    
+    const observerOptions = {
+      rootMargin: '-100px 0px 0px 0px'  // Triggers slightly before the hero section ends
+    };
+    
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        // Show navbar when hero is not intersecting (scrolled past)
+        navbar.classList.toggle('visible', !entry.isIntersecting);
+      });
+    }, observerOptions);
+    
+    heroObserver.observe(hero);
   </script>
 </html>
