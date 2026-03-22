@@ -36,7 +36,7 @@ export function Clients() {
               className="relative h-10 w-24 grayscale hover:grayscale-0 transition-all duration-300 opacity-50 hover:opacity-100"
             >
               <Image
-                src={`https://img.logo.dev/${client.domain}?token=${process.env.NEXT_PUBLIC_LOGO_DEV_TOKEN}&retina=true&size=256&format=png&greyscale=false`}
+                src={`https://img.logo.dev/${client.domain}?token=live_6a1a28fd-6420-4492-aeb0-b297461d9de2&retina=true&size=256&format=png&greyscale=false`}
                 alt={client.name}
                 fill
                 className="object-contain"
