@@ -34,17 +34,12 @@ export default function ProductsPage() {
 
         <div className="grid gap-8 md:grid-cols-2">
           {products.map((product) => {
-            const isExternal = product.href.startsWith('http')
-            const Card = isExternal ? 'a' : Link
-            const cardProps = isExternal
-              ? { href: product.href, target: '_blank', rel: 'noopener noreferrer' }
-              : { href: `/products/${product.id}` }
             const Icon = iconMap[product.icon]
 
             return (
-              <Card
+              <Link
                 key={product.id}
-                {...cardProps}
+                href={`/products/${product.id}`}
                 className="glass-card group block"
               >
                 <div className="flex items-start gap-4">
@@ -77,7 +72,7 @@ export default function ProductsPage() {
                     )}
                   </div>
                 </div>
-              </Card>
+              </Link>
             )
           })}
         </div>
