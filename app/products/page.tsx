@@ -4,8 +4,11 @@ import { products, iconMap } from '@/lib/products'
 import { Globe, Smartphone, Apple, Figma, Chrome } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Products - Adee Labs',
-  description: 'Explore our suite of innovative digital tools and applications.',
+  title: 'Products',
+  description: 'Explore our suite of innovative digital tools and applications - Supersplit, Image2Vector, TextGPT, MapMaker, and more.',
+  alternates: {
+    canonical: '/products',
+  },
 }
 
 const platformIconNames: Record<string, string> = {
